@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --config ./build/config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./build/config/webpack.prod.js",
     "start": "cross-env NODE_ENV=development node  ./build/server/index.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./build/config/webpack.prod.js",
     "lint": "npm run lint-eslint",
     "lint-eslint": "npx eslint src --ext .js,.ts,tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
