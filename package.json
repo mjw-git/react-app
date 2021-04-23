@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --config ./scripts/build/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./scripts/build/webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --config ./build/config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./build/config/webpack.prod.js",
+    "start": "cross-env NODE_ENV=development node  ./build/server/index.js",
     "lint": "npm run lint-eslint",
     "lint-eslint": "npx eslint src --ext .js,.ts,tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,6 +40,7 @@
     "@typescript-eslint/parser": "^4.22.0",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
+    "chalk": "^4.1.1",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
@@ -58,6 +60,7 @@
     "fork-ts-checker-webpack-plugin": "^6.2.4",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.3.1",
+    "ip": "^1.1.5",
     "less": "^4.1.1",
     "less-loader": "^8.1.1",
     "lint-staged": "^10.5.4",

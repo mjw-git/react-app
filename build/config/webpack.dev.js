@@ -13,9 +13,10 @@ module.exports = merge(common, {
     clientLogLevel: "silent",
     overlay: true, //编译错误直接显示在页面上
     contentBase: path.resolve(PROJECT_PATH, "./dist"),
-    port: "3000", // 指定端口，默认是8080
+    // port: "3000", // 指定端口，默认是8080
+    noInfo:true,
     // stats: "errors-only", // 终端仅打印 error
-    // clientLogLevel: "silent", // 日志等级
+    clientLogLevel: "silent", // 日志等级
     compress: true, // 是否启用 gzip 压缩
     open: true, // 打开默认浏览器
     hot: true // 热更新

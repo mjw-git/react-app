@@ -31,7 +31,7 @@ module.exports = {
     app: path.resolve(PROJECT_PATH, "./src/index.tsx")
   },
   output: {
-    filename: `js/[name]:[hash:8].js`,
+    filename: `js/[name].js`,
     path: path.resolve(PROJECT_PATH, "./dist")
   },
   resolve: {
@@ -128,6 +128,8 @@ module.exports = {
       name: isDEV ? "RUNNING" : "BUILDING",
       color: "#52c41a"
     }),
-    new ForkTsCheckerWebpackPlugin()
+    new ForkTsCheckerWebpackPlugin({
+    
+    })
   ]
 };
